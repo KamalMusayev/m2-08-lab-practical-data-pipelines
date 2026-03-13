@@ -4,8 +4,9 @@ This pipeline is designed to process transactional data for an online retail com
 
 The architecture follows a layered design where raw data is first ingested and stored without modification. The data then passes through a validation stage where schema and business rules are checked. Invalid records are redirected to a quarantine area for investigation. Valid records continue to a transformation stage where additional features and derived columns are created. Finally, the processed data is stored in clean and feature layers that serve downstream consumers such as BI dashboards and ML models.
 
-Below is the high-level architecture diagram of the pipeline.
+Below is the high-level architecture diagram of the pipeline:
 
+```text
                 ┌──────────────────────┐
                 │   Batch Data Source  │
                 │  Online Retail.xlsx  │
@@ -74,6 +75,10 @@ Below is the high-level architecture diagram of the pipeline.
         │ Freshness, Data  │
         │ Quality, Volume  │
         └──────────────────┘
+
+
+
+        
 
 In this pipeline, each stage has its own role. This pipeline helps us to process and validate raw data by batch and stream transaction from raw data, separate invalid valid data, transform, and finally save clean data. At the same time, it shows how BI and ML models access the data. Finally, it monitors our data.
 
