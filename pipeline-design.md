@@ -76,7 +76,7 @@ Below is the high-level architecture diagram of the pipeline:
         │ Quality, Volume  │
         └──────────────────┘
 
-
+```
 
         
 
